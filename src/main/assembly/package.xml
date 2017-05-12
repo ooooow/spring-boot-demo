@@ -3,28 +3,30 @@
           xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
     <id>package</id>
     <formats>
-        <format>zip</format>
+        <format>dir</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
     <fileSets>
         <fileSet>
-            <directory>/src/main/resources</directory>
+            <directory>${basedir}/src/main/resources</directory>
             <!-- 过滤 -->
             <excludes>
                 <exclude>*.xml</exclude>
             </excludes>
-            <outputDirectory>/conf</outputDirectory>
+            <outputDirectory>conf</outputDirectory>
         </fileSet>
         <fileSet>
-            <directory>/src/main/bin</directory>
-            <outputDirectory>/bin</outputDirectory>
+            <directory>src/main/bin</directory>
+            <outputDirectory>bin</outputDirectory>
+            <fileMode>0755</fileMode>
         </fileSet>
     </fileSets>
+
 
     <dependencySets>
         <dependencySet>
             <useProjectArtifact>true</useProjectArtifact>
-            <outputDirectory>/lib</outputDirectory>
+            <outputDirectory>lib</outputDirectory>
             <scope>runtime</scope>
         </dependencySet>
     </dependencySets>

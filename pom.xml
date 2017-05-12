@@ -33,6 +33,7 @@
                                 <descriptor>src/main/assembly/package.xml</descriptor>
                             </descriptors>
                             <finalName>spring-demo</finalName>
+                            <outputDirectory>${project.build.directory}/</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
