@@ -6,7 +6,7 @@ DEPLOY_DIR=`pwd`
 CONF_DIR=$DEPLOY_DIR/conf
 
 
-SERVER_PORT= 9999
+SERVER_PORT=9999
 
 
 if [ -z "$SERVER_NAME" ]; then
