@@ -14,7 +14,7 @@ fi
 PIDS=`ps -f | grep java | grep "$CONF_DIR" |awk '{print $2}'`
 if [ -z "$PIDS" ]; then
     echo "ERROR: The $SERVER_NAME does not started!"
-    exit 1
+    exit 0
 fi
 
 
